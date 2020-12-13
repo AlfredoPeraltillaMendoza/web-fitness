@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro</title>
+  <style>
+  body {
+  background-image: url('https://www.ecestaticos.com/image/clipping/fcdf4473a8fe9b5ba0ade682b7b33a6b/los-10-errores-que-cometes-despues-de-hacer-ejercicio.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+  </style>
+</head>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+<script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(dibujarGrafico);
+   function dibujarGrafico() {
+     // Tabla de datos: valores y etiquetas 
+     var data = google.visualization.arrayToDataTable([
+       ['Ejercicios de cardio realizados', 'Minutos'],
+       ['Trote', 20.21],
+       ['Saltos de cuerda', 11.28],
+       ['Salto de tijeras', 17.26],
+       ['Saltos de rana ', 12],
+       ['Saltos de boxeador', 0],
+       ['Bear Crawl', 16],
+       ['Caminata Ligera', 11],
+       ['Trote Ligero', 10.25]      
+     ]);
+     var options = {
+       title: 'Semana 1',
+       colors: ['#e7711c'],
+     }
+     // Dibujar el gráfico
+     new google.visualization.ColumnChart( 
+     
+       document.getElementById('GraficoGoogleChart-ejemplo-1')
+     ).draw(data, options);
+   }
+ </script> 
+<body>
+<h1 style="font-family:BritannicBold;color:DodgerBlue;font-size:60px;"; >Cuenta⇒Registro⇒Ejercicios-Cardio</h1>
+<div style="text-align:center;" id="GraficoGoogleChart-ejemplo-1" style="width: 800px; height: 600px; text-align:center;">
+</div>
+<input style="align:center;" type="button" onclick="history.back()" name="volver atras" value="REGRESAR">
+
+</body>
+</html>
